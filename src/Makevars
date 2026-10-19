@@ -1,0 +1,4 @@
+CXX_STD = CXX20
+ARROW_PREFIX ?= $(CONDA_PREFIX)
+PKG_CPPFLAGS = -I$(ARROW_PREFIX)/include
+PKG_LIBS = -L$(ARROW_PREFIX)/lib -Wl,-rpath,$(ARROW_PREFIX)/lib -larrow -lparquet
